@@ -4,7 +4,8 @@
 > [!WARNING]
 > THIS IS NOT INTENDED TO BE STABLE. I believe as this is a fork, it should be stable but this WILL be badly maintained.
 
-CURRENTLY NO CHANGES HAVE BEEN MADE
+> [!NOTE]
+> CURRENTLY NO CHANGES HAVE BEEN MADE
 
 # SparxPlus
 
