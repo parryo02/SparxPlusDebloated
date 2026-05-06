@@ -1,3 +1,5 @@
+This fork was made in order to remove some features I find are not needed and potentially improve the dark mode functionality. I do not yet know if making the UI elements dark mode is easy. THIS IS NOT INTENDED TO BE STABLE. I believe as this is a fork, it should be but this WILL be badly maintained.
+
 # SparxPlus
 
 A browser (chromium based / firefox based) extension for [Sparx-Learning](https://sparx-learning.com) web apps to improve QoL (without sacrificing learning!)  
