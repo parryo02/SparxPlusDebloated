@@ -1,4 +1,7 @@
-This fork was made in order to remove some features I find are not needed and potentially improve the dark mode functionality. I do not yet know if making the UI elements dark mode is easy. THIS IS NOT INTENDED TO BE STABLE. I believe as this is a fork, it should be but this WILL be badly maintained.
+> [!NOTE]
+> This fork was made in order to remove some features I find are not needed and potentially improve the dark mode functionality. I do not yet know if making the UI elements dark mode is easy. 
+> [!WARNING]
+> THIS IS NOT INTENDED TO BE STABLE. I believe as this is a fork, it should be stable but this WILL be badly maintained.
 
 CURRENTLY NO CHANGES HAVE BEEN MADE
 
