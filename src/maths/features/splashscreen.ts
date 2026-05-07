@@ -26,7 +26,7 @@ const setSeen = () => {
 export const doSplashScreen = () => {
 
     const instructions = () => {
-        var menu: PopupMenu = createBlurredMenu(createBlur(), "Welcome to SparxPlus!")
+        var menu: PopupMenu = createBlurredMenu(createBlur(), "Welcome to SparxPlusDebloated!")
     
         menu.onclose(() => {
             setSeen()
@@ -67,16 +67,16 @@ export const doSplashScreen = () => {
         var content = document.createElement("span")
         content.style.color = "var(--colours-text-body)"
         content.style.fontSize = "20px"
-        content.innerText = `Thank you for downloading the SparxPlus Extension!
+        content.innerText = `Thank you for downloading the SparxPlusDebloated Extension!, forked by parryo02 to remove the fun category and potentially improve dark mode, from the original Sparxplus by deadfry42.
         By default, most settings are disabled, so you won't notice anything right away.
     
-        SparxPlus is a browser extension which aims to modify the Sparx-Learning webapps, to make the experience marginally better.
+        SparxPlusDebloated is a browser extension which aims to modify the Sparx-Learning webapps, to make the experience marginally better.
         SparxMaths is the most supported platform, and contains many features!
     
         PS: This is NOT an extension that does your homework for you, but makes it more bearable!
         
         Everything is hidden behind the Settings page, which you can access in the top right drop down menu!
-        If you ever encounter any bugs, please be sure to report them to me! Details in the "About" Section in Settings.
+        If you ever encounter any bugs, please be sure to report them to me and potentially deadfry42! Details in the "About" Section in Settings.
         
         Enjoy, and I hope this extension helps!`
     
