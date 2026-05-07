@@ -3,46 +3,6 @@ import { PopupMenu } from "../classes/menuClasses";
 import { getSVG } from "../constants/svgs";
 import { getAsset } from "./defaults";
 
-export function jumpscare(url : string, permitAudio? : boolean) {
-    var canAudio = true;
-    if (permitAudio != null) {
-        if (permitAudio == false) canAudio = false;
-    }
-    var audio : HTMLAudioElement = new Audio(getAsset(url+".mp3"));
-    var imgElement = document.createElement("img")
-    imgElement.style.zIndex = "99999999";
-    imgElement.style.position = "absolute"
-    imgElement.style.left = "0";
-    imgElement.style.top = "0";
-    imgElement.style.opacity = "1";
-    var width = window.innerWidth
-    var height = window.innerHeight
-    imgElement.style.maxWidth = `${width}px`
-    imgElement.style.maxHeight = `${height}px`
-    imgElement.style.minWidth = `${width}px`
-    imgElement.style.minHeight = `${height}px`
-    imgElement.style.width = `${width}px`
-    imgElement.style.height = `${height}px`
-    imgElement.style.pointerEvents = "none"
-    imgElement.src = getAsset(url+".png")
-    document.body.append(imgElement)
-    setTimeout(() => {
-        imgElement.animate(
-            [
-                { opacity: "0" },
-            ], {
-                duration: 1500,
-                fill: 'forwards',
-            }
-        );
-        setTimeout(() => {
-            imgElement.remove()
-        }, 1500);
-    }, 250);
-    
-    if (canAudio) audio.play();
-}
-
 export function createWarningBox(warningTxt : string, isInformational? : boolean | null) {
     var warning = document.createElement("div")
     warning.style.paddingBottom = "10px"

@@ -2,12 +2,11 @@ import { QuestionData, QuestionID } from "../lib/classes/questionClasses";
 import { Conditions, PlatformID, Actions } from "../lib/constants/enums";
 import { getAsset, getDescendants } from "../lib/helpers/defaults";
 import { deserialiseQuestionID } from "../lib/helpers/deserialisation";
-import { appendStyleSheet, sendNotification, jumpscare, appendStyleContent, createNewOptionInDDM } from "../lib/helpers/elements";
+import { appendStyleSheet, sendNotification, appendStyleContent, createNewOptionInDDM } from "../lib/helpers/elements";
 import { getQuestionID } from "../lib/helpers/question";
 import { baseLog, getLastUpdated, log } from "../lib/index";
 import { applySettingsPage } from "./features/settings";
 import { doSplashScreen } from "./features/splashscreen";
-import { startOneko, startYippee } from "./features/fun";
 import { classMapping, customSettings, keyboardMapping, setUpdateDebugMenu, setToggleDebugMenu, toggleDebugMenu, settingsFrontend } from "./index";
 
 (async () => {
@@ -201,20 +200,6 @@ import { classMapping, customSettings, keyboardMapping, setUpdateDebugMenu, setT
             if (res.selectText) {
                 appendStyleContent("selectableText", ":root {--user-select-accessibility-setting: default !important;}")
             }
-            if (res.test) {
-                addOptionToDDMenu(null, "SparxPlus Test", () => {
-                    sendNotification("Testing!", 2500)
-                    jumpscare("assets/memes/wrong", customSettings.audio)
-                })
-                addOptionToDDMenu(null, "SparxPlus Test 2", () => {
-                    sendNotification("Testing!", 2500)
-                    jumpscare("assets/memes/correct", customSettings.audio)
-                })
-                addOptionToDDMenu(null, "SparxPlus Test Yes", () => {
-                    sendNotification("Testing!", 2500)
-                    jumpscare("assets/memes/wrong2", customSettings.audio)
-                })
-            }
             if (res.customCSS != null && res.customCSS != "") {
                 baseLog(res.customCSS)
                 appendStyleContent("customCSS", res.customCSS)
@@ -229,12 +214,6 @@ import { classMapping, customSettings, keyboardMapping, setUpdateDebugMenu, setT
             }
             if (res.whiteboardAutoClear) {
                 cleanUpExpiredData();
-            }
-            if (res.yippee) {
-                startYippee();
-            }
-            if (res.oneko) {
-                startOneko();
             }
         }
 

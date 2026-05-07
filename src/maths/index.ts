@@ -4,7 +4,6 @@ import { Panel, SettingsPanel, ToggleSetting, SettingWarning, InputSetting, Text
 import { Actions, ButtonType, Conditions } from "../lib/constants/enums";
 import { convertChildNodeToHTMLElement, formatBytes, getAsset, getCustomSettings, setCustomSettings } from "../lib/helpers/defaults";
 import { deserialiseQuestionID } from "../lib/helpers/deserialisation";
-import { jumpscare } from "../lib/helpers/elements";
 import { getDiscordLink, getGithubLink, getGoogleLink, getVersion, getLastUpdated, getLogs, addChangedEvent } from "../lib/index";
 import { doWhiteboard } from "./features/whiteboard";
 import { confirmResetLocalData, confirmResetSyncData, openWhiteboardDataMenu } from "./features/data_management";
@@ -45,10 +44,6 @@ export const customSettings : {[index: string]:any} = { // default settings
     whiteboardAutoClear: true, // delete week old whiteboard data
 
     addZoomFixes: false, // puts a percentage in zooming dialogue
-
-    jumpscareWhenWrong: false, // animation when q wrong (slighly broken)
-    jumpscareWhenCorrect: false, // animation when q correct (slighly broken)
-    yippee: false, // play yippee sound when anything is pressed
 
     // saveAnswer: true // save the answer when you get it wrong
     // addZoomFixes: false
@@ -183,31 +178,13 @@ export const settingsFrontend : Panel[] = [
                     })
                     ),
 
-    new SettingsPanel("Fun Settings", "Fun small additions to make Sparx more enjoyable to use!")
-        .addSetting(new ToggleSetting("jumpscareWhenWrong")
-                    .setName("Jumpscare upon incorrect answer")
-                    .setDescription("Play a fullscreen jumpscare whenever you get a question wrong (it's scary and VERY LOUD) (UNSTABLE)")
-                    .setExperimental(true))
-        .addSetting(new ToggleSetting("jumpscareWhenCorrect")
-                    .setName("Jumpscare upon correct answer")
-                    .setDescription("Play a fullscreen jumpscare whenever you get a question correct (it's scary and VERY LOUD) (UNSTABLE)")
-                    .setExperimental(true))
-        .addSetting(new ToggleSetting("yippee")
-                    .setName("yippee")
-                    .setDescription("yippee (requires audio)")
-                    .setExperimental(true))
-        .addSetting(new ToggleSetting("oneko")
-                    .setName("oneko")
-                    .setDescription("A cat that chases around your cursor (inspired by the oneko.js implementation by adryd325)")
-                    ),
-
     new SettingsPanel("Extension Settings", "Settings that manage the extension itself")
         .addSetting(new ToggleSetting("enableCustomLogo")
                     .setName("Enable Custom logo")
-                    .setDescription("Whether or not to use the custom SparxPlus logo in the top left."))
+                    .setDescription("Whether or not to use the custom SparxPlusDebloated logo in the top left."))
         .addSetting(new ToggleSetting("enableStartupNotification")
                     .setName("Enable Startup Notification")
-                    .setDescription("Whether or not to notify you whenever SparxPlus successfully loads."))
+                    .setDescription("Whether or not to notify you whenever SparxPlusDebloated successfully loads."))
         .addSetting(new ToggleSetting("enableDebugByDefault")
                     .setName("Show debug menu by default")
                     .setDescription("Whether or not to enable the debug menu in the top left corner by default. Use \"Home\" to toggle."))
@@ -240,12 +217,12 @@ export const settingsFrontend : Panel[] = [
                     .setValue("Your extension data will NEVER be shared externally to a server, unless you explicitly share it manually. If you reset your extension data, you are responsible for the data loss, and we cannot help you recover that data.")
                 ),
 
-    new DescriptivePanel("About", "About SparxPlus")
+    new DescriptivePanel("About", "About SparxPlusDebloated")
         .setText(`
-            Thanks for trying SparxPlus!
+            Thanks for trying SparxPlusDebloated!
             <br>If you have anything to say about the extension, please leave a review at the <a href="${getGoogleLink()}">Chrome Web Store</a> page for this extension, or alternatively just join my discord, linked below! (This is so I can hear your feedback, and I can improve!)
             <br>
-            <br>SparxPlus is a browser extension which modifies Sparx homework platforms, for quality of life, or just for fun.
+            <br>SparxPlusDebloated is a browser extension which modifies Sparx homework platforms for quality of life.
             <br>
             <br>Interested in the development of this plugin?
             <br>This project is fully open source! Available <a href="${getGithubLink()}">here</a>!
@@ -256,9 +233,9 @@ export const settingsFrontend : Panel[] = [
             <br>
             <br>This project is not affiliated with Sparx, SparxMaths and/or Sparx-learning.
             <br>
-            <br><h6>[SparxPlus version ${getVersion()}, last updated ${getLastUpdated()}]</h6>`),
+            <br><h6>[SparxPlusDebloated version ${getVersion()}, last updated ${getLastUpdated()}]</h6>`),
 
-    new BlankPanel("Logs", "Logs outputted by SparxPlus")
+    new BlankPanel("Logs", "Logs outputted by SparxPlusDebloated")
         .setInit((panel : HTMLElement) => {
             var logs = document.createElement("p")
             panel.append(logs);
@@ -672,12 +649,6 @@ export const classMapping : ClassMapping[] = [
             for (var res of result) {
                 var name = res.className;
                 if (name == null || name.includes == null) return;
-                if (name.includes("Incorrect")) {
-                    if (customSettings.jumpscareWhenWrong) jumpscare("assets/memes/wrong", customSettings.audio)
-                    
-                } else if (name.includes("Correct")) {
-                    if (customSettings.jumpscareWhenCorrect) jumpscare("assets/memes/correct", customSettings.audio)
-                }
             }
         }),
 
