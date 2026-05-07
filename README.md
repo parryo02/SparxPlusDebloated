@@ -4,9 +4,6 @@
 > [!WARNING]
 > THIS IS NOT INTENDED TO BE STABLE. I believe as this is a fork, it should be stable but this WILL be badly maintained.
 
-> [!NOTE]
-> CURRENTLY NO CHANGES HAVE BEEN MADE
-
 # SparxPlus
 
 A browser (chromium based / firefox based) extension for [Sparx-Learning](https://sparx-learning.com) web apps to improve QoL (without sacrificing learning!)  
