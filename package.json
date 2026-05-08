@@ -10,16 +10,16 @@
     "node": ">= 14.0.0",
     "npm": ">= 6.0.0"
   },
-  "homepage": "https://github.com/deadfry42/SparxPlus",
+  "homepage": "https://github.com/parryo02/SparxPlusDebloated",
   "repository": {
     "type": "git",
-    "url": "https://github.com/deadfry42/SparxPlus.git"
+    "url": "https://github.com/parryo02/SparxPlusDebloated.git"
   },
-  "bugs": "https://github.com/deadfry42/SparxPlus/issues",
+  "bugs": "https://github.com/parryo02/SparxPlusDebloated/issues",
   "keywords": [],
   "author": {
-    "name": "deadfry42",
-    "email": "nk.personal.work@gmail.com",
+    "name": "parryo02",
+    "email": "owen.parry2912@gmail.com",
     "url": "https://nikodem.co.uk"
   },
   "contributors": [],
