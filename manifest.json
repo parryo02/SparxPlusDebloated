@@ -9,9 +9,7 @@
             "id": "sparx-plus-debloated@nikodem.co.uk"
         }
     },
-    "data_collection_permissions": {
-        "required": ["none"]
-    },
+    "data_collection_permissions": "none",
     "host_permissions": [
         "*://maths.sparx-learning.com/*",
         "*://science.sparx-learning.com/*",
