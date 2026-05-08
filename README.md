@@ -4,7 +4,9 @@
 > [!WARNING]
 > THIS IS NOT INTENDED TO BE STABLE. I believe as this is a fork, it should be stable but this WILL be badly maintained.
 
-# SparxPlus
+release tags are named v[upstream].[upstream].[upstream].x
+
+# SparxPlusDebloated
 
 A browser (chromium based / firefox based) extension for [Sparx-Learning](https://sparx-learning.com) web apps to improve QoL (without sacrificing learning!)  
   
@@ -16,7 +18,7 @@ Compatible with:
 
 > [!WARNING]
 > This is not officially supported by Sparx, and can be removed, banned or stop working whenever.  
-> This is considered an experimental extension, so you may encounter issues while using SparxPlus. Please make sure to report these issues in the issues tab.
+> This is considered an experimental extension, so you may encounter issues while using SparxPlusDebloated. Please make sure to report these issues in the issues tab.
 
 > [!NOTE]
 > This is NOT intended to be a browser extension that does your Sparx homework for you, but to make the experience better.
