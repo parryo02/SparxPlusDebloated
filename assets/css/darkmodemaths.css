@@ -59,6 +59,10 @@
     --spx-shadow-lg: 0px 4px 11px -1px rgba(45, 47, 50, 0.8);
     --spx-shadow-lg-dark-blue: 0px 4px 11px -1px var(--palette-dark-blue);
     --spx-shadow-lg-top: 0px -3px 11px rgba(128, 128, 128, .2);
+
+    --primary-bg-disabled: #1a1a10 !important; 
+    --primary-col-disabled: #4f4f4a !important;
+    --primary-border-col-disabled: #000000 !important;
 }
 
 p, h1, h2, h3, h4, h5, h6, .SparxPlusSubHeading {
