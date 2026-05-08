@@ -6,7 +6,7 @@
     "permissions": ["storage", "unlimitedStorage"],
     "browser_specific_settings": {
         "gecko": {
-            "id": "sparx-plus-debloated@owen.parry2912@gmail.com"
+            "id": "sparx-plus-debloated@nikodem.co.uk"
         }
     },
     "data_collection_permissions": {
