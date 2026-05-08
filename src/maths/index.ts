@@ -220,15 +220,15 @@ export const settingsFrontend : Panel[] = [
     new DescriptivePanel("About", "About SparxPlusDebloated")
         .setText(`
             Thanks for trying SparxPlusDebloated!
-            <br>If you have anything to say about the extension, please leave a review at the <a href="${getGoogleLink()}">Chrome Web Store</a> page for this extension, or alternatively just join my discord, linked below! (This is so I can hear your feedback, and I can improve!)
+            <br>If you have anything to say about the (non-fork) extension, please leave a review at the <a href="${getGoogleLink()}">Chrome Web Store</a> page for this extension, or alternatively just join my discord, linked below! (This is so I can hear your feedback, and I can improve!)
             <br>
             <br>SparxPlusDebloated is a browser extension which modifies Sparx homework platforms for quality of life.
             <br>
             <br>Interested in the development of this plugin?
-            <br>This project is fully open source! Available <a href="${getGithubLink()}">here</a>!
+            <br>This project is fully open source! Available <a href="${getGithubLink()}">here</a>! non-fork <a href="https://github.com/deadfry42/SparxPlus">here</a>!
             <br>(I hope the code is at the very least readable)
             <br>
-            <br>Want to join the discord, to see new updates and general Sparx(Plus) help?
+            <br>Want to join the (non-fork) discord, to see new updates and general Sparx(Plus) help?
             <br>Join the discord <a href="${getDiscordLink()}">here</a>!
             <br>
             <br>This project is not affiliated with Sparx, SparxMaths and/or Sparx-learning.

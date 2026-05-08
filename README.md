@@ -42,7 +42,7 @@ It's also open-source, because I like open-source code :)
 
 ## Instructions on how to build from source
 
-* Clone this repository eg. `git clone https://github.com/deadfry42/SparxPlus.git`
+* Clone this repository eg. `git clone https://github.com/parryo02/SparxPlusDebloated.git`
 * (Make sure you have npm installed)
 * run `npm i` # to get the npm packages installed
 * once done, run `npm run build` # to build release
